@@ -1,0 +1,10 @@
+I - Tạo file pdf
+1. Tạo ra file pdf đầu tiên
+2. Tạo file pdf có sử dụng page_config để định dạng trang in
+3. Có sử dụng hình ảnh để làm nền
+4. Viết nội dung cho file pdf, định dạng cho đẹp
+5. Viết nội dung cho file pdf, sử dụng ma trận
+6. Xây dựng ma trận tọa độ điểm cho hình ảnh trên file pdf
+
+II - Lấy dữ liệu ghi vào file pdf
+1. 

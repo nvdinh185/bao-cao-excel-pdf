@@ -4,7 +4,7 @@ const fs = require('fs');
 outputFilename = './files/pdf2.pdf';
 
 page_config = {
-    size: 'A5',
+    size: 'A5', //cỡ giấy
     margin: 0,
     layout: 'landscape' //nam ngang
     //layout: 'portrait'  //mac dinh (nam doc)
