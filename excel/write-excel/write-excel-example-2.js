@@ -28,4 +28,4 @@ workbook.xlsx.readFile('old.xlsx')
 
         return workbook.xlsx.writeFile('new.xlsx');
     })
-    .catch(err => console.log("xay ra loi", err))
+    .catch(err => console.log("Xay ra loi: " + err))

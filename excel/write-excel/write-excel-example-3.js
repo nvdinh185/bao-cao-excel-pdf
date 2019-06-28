@@ -8,15 +8,19 @@ let arSinhVien = [
 ]
 
 let excelOp = async () => {
-    workbook = await workbook.xlsx.readFile('old.xlsx');
-    let worksheet = workbook.getWorksheet('Sheet1');
-    arSinhVien.forEach((element, idx) => {
-        var row = worksheet.getRow(idx + 2);
-        row.getCell(1).value = element.stt;
-        row.getCell(2).value = element.name;
-        row.getCell(3).value = element.namsinh;
-    });
-    workbook.xlsx.writeFile('question_50508131.xlsx');
+    try {
+        workbook = await workbook.xlsx.readFile('old.xlsx');
+        let worksheet = workbook.getWorksheet('Sheet1');
+        arSinhVien.forEach((element, idx) => {
+            var row = worksheet.getRow(idx + 2);
+            row.getCell(1).value = element.stt;
+            row.getCell(2).value = element.name;
+            row.getCell(3).value = element.namsinh;
+        });
+        workbook.xlsx.writeFile('question_50508131.xlsx');
+    } catch (e) {
+        console.log("Loi: " + e)
+    }
 }
 
 excelOp();
