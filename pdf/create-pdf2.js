@@ -15,6 +15,6 @@ doc = new PDFDocument(
 );
 
 doc.pipe(fs.createWriteStream(outputFilename));
-
+doc.text('Hello World.')
 doc.end();
 console.log("Da tao ra file pdf sample!");
