@@ -10,7 +10,7 @@ let excelOp = async () => {
         row = worksheet.addRow(2);
         row.getCell(1).value = 1234;
         row.getCell(2).value = 4567;
-        workbook.xlsx.writeFile('question_50508131.xlsx');
+        workbook.xlsx.writeFile('Sheet1.xlsx');
     } catch (e) {
         console.log("Loi: " + e)
     }

@@ -30,11 +30,11 @@ for (let row = 0; row < matrix_point.max_row; row++) {
         matrix.push({
             x: col * matrix_point.zipper_col,
             y: row * matrix_point.zipper_row,
-            value: "(" + col * matrix_point.zipper_col + " , " + row * matrix_point.zipper_row + ")"
+            value: "(" + col * matrix_point.zipper_col + "-" + row * matrix_point.zipper_row + ")"
         })
     }
 }
-console.log(matrix)
+//console.log(matrix)
 doc = new PDFDocument(
     page_config
 );

@@ -9,10 +9,10 @@ let excelOp = async () => {
         row.getCell(1).value = 123;
         row.getCell(2).value = 456;
         row = worksheet.addRow(2);
-        row.getCell(1).value = 1234;
-        row.getCell(2).value = 4567;
+        row.getCell(1).value = 234;
+        row.getCell(2).value = 567;
         worksheet.eachRow(row => {
-            row.eachCell((cell) => {
+            row.eachCell(cell => {
                 cell.font = font;
                 cell.border = {
                     top: { style: 'thin' },
@@ -22,7 +22,7 @@ let excelOp = async () => {
                 };
             });
         });
-        workbook.xlsx.writeFile('question_50508131.xlsx');
+        workbook.xlsx.writeFile('Sheet1.xlsx');
     } catch (e) {
         console.log("Loi: " + e)
     }
