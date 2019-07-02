@@ -3,8 +3,7 @@ const PDFDocument = require('pdfkit');
 
 let options = {
     size: 'A6',
-    margin: 0,
-    layout: 'portrait'
+    margin: 0
     // you pdf settings here.
 }
 
@@ -15,9 +14,9 @@ let arSinhVien = [
 ]
 
 const doc = new PDFDocument(options);
-let out = fs.createWriteStream('./files/pdf.pdf')
+let out = fs.createWriteStream('./files/output.pdf')
 doc.pipe(out);
-doc.text('DANH SACH SINH VIEN', 0, 0)
+doc.text('DANH SACH NHAN VIEN', 0, 0)
 arSinhVien.forEach((el, idx) => {
     doc.text(el.stt, 10, 30 * (idx + 1));
     doc.text(el.name, 50, 30 * (idx + 1));

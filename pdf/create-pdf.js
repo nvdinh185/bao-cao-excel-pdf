@@ -18,27 +18,27 @@ config = {
     color_default: "blue",
     title: "mau giay moi",
     author: "intenet"
-},
-    mask = {
-        ten_kh: {
-            col: 120,
-            row: 100
-        },
-        sotrang: {
-            col: 540,
-            row: 380,
-            color: "red"
-        }
+};
+mask = {
+    ten_kh: {
+        col: 120,
+        row: 100
     },
-    list_data = [
-        { ten_kh: "Nguyen Van Dinh", sotrang: 1 },
-        { ten_kh: "Nguyen Van anh", sotrang: 2 },
-        { ten_kh: "Nguyen Van em", sotrang: 3 },
-        { ten_kh: "Nguyen Van minh", sotrang: 4 },
-        { ten_kh: "Nguyen Van ha", sotrang: 5 },
-        { ten_kh: "Nguyen Van hung", sotrang: 6 },
-        { ten_kh: "Nguyen Van hoa", sotrang: 7 }
-    ]
+    sotrang: {
+        col: 540,
+        row: 380,
+        color: "red"
+    }
+};
+list_data = [
+    { ten_kh: "Nguyen Van Dinh", sotrang: 1 },
+    { ten_kh: "Nguyen Van anh", sotrang: 2 },
+    { ten_kh: "Nguyen Van em", sotrang: 3 },
+    { ten_kh: "Nguyen Van minh", sotrang: 4 },
+    { ten_kh: "Nguyen Van ha", sotrang: 5 },
+    { ten_kh: "Nguyen Van hung", sotrang: 6 },
+    { ten_kh: "Nguyen Van hoa", sotrang: 7 }
+]
 
 var pagesPrint = [];
 list_data.forEach(kh => {

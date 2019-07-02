@@ -8,7 +8,7 @@ let options = {
     // you pdf settings here.
 }
 const doc = new PDFDocument(options);
-let out = fs.createWriteStream('output.pdf')
+let out = fs.createWriteStream('./files/output.pdf')
 doc.pipe(out);
 doc.text('Hello World.')
 doc.end();
