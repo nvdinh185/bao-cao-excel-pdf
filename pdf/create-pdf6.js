@@ -10,7 +10,7 @@ page_config = {
 };
 
 background = {
-    image: './images/LAWKI.jpg',
+    image: './images/quyen2.jpg',
     left: 0,
     top: 0,
     width: 595,
@@ -41,16 +41,19 @@ doc = new PDFDocument(
 
 doc.pipe(fs.createWriteStream(outputFilename));
 
-doc.image(background.image, background.left, background.top, { width: background.width, height: background.height });
+//doc.image(background.image, background.left, background.top, { width: background.width, height: background.height });
 
 doc.registerFont('Time-new-roman-utf8', './fonts/times.ttf');
 doc.font('Time-new-roman-utf8');
 
-doc.fontSize(20);
+doc.fontSize(10);
 doc.fillColor("red");
-
-matrix.forEach(el => {
+doc.text("(123)", 0, 0)
+doc.text(".", 0, 10)
+doc.text("(123)", 550, 386)
+doc.text(".", 590, 396)
+/* matrix.forEach(el => {
     doc.text(el.value, el.x, el.y);
-});
+}); */
 doc.end();
 console.log("Da tao ra file pdf sample!");
