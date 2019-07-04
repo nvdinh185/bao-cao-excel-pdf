@@ -32,12 +32,15 @@ for (let row = 0; row < matrix_point.max_row; row++) {
         })
     }
 }
-console.log(maxtrix)
+//console.log(maxtrix)
 const doc = new PDFDocument(options);
 let out = fs.createWriteStream('./files/output.pdf')
-doc.pipe(out);
+let stream = doc.pipe(out);
 doc.image(background.image, background.left, background.top, { width: background.width, height: background.height });
 
 doc.text('DANH SACH NHAN VIEN', 0, 0)
 
 doc.end();
+stream.on('finish', () => {
+    console.log("Đã tạo ra file ./files/output.pdf")
+})
