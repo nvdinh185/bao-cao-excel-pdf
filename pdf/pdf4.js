@@ -8,7 +8,7 @@ let options = {
 };
 
 background = {
-    image: './images/mau-hoa-don.jpg',
+    image: './images/hoa-don.jpg',
     left: 0,
     top: 0,
     width: 595,
@@ -16,8 +16,8 @@ background = {
 };
 
 matrix_point = {
-    max_row: 10, //so luong dong
-    max_col: 6, // so luong cot
+    max_row: 11, //so luong dong
+    max_col: 7, // so luong cot
     zipper_row: 40, //khoang cach giua 2 dong
     zipper_col: 90, //khoang cach giua 2 cot
 };
@@ -38,7 +38,9 @@ let out = fs.createWriteStream('./files/output.pdf')
 let stream = doc.pipe(out);
 doc.image(background.image, background.left, background.top, { width: background.width, height: background.height });
 
-doc.text('DANH SACH NHAN VIEN', 0, 0)
+maxtrix.forEach(el => {
+    doc.text(el.value, el.x, el.y)
+})
 
 doc.end();
 stream.on('finish', () => {
