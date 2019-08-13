@@ -1,10 +1,16 @@
 I - Tạo file pdf
-1. Tạo ra file pdf đầu tiên
-2. Tạo file pdf có sử dụng page_config để định dạng trang in
-3. Có sử dụng hình ảnh để làm nền
-4. Viết nội dung cho file pdf, định dạng cho đẹp
-5. Viết nội dung cho file pdf, sử dụng ma trận
-6. Xây dựng ma trận tọa độ điểm cho hình ảnh trên file pdf
+1. Tạo ra file pdf đầu tiên: pdf01.js
+- Mặc định là cỡ giấy A4, nằm dọc
+
+2. Tạo file pdf có sử dụng page_config để định dạng trang in: pdf02.js
+
+3. Có sử dụng hình ảnh để làm nền: pdf03.js
+
+4. Viết nội dung cho file pdf, định dạng cho đẹp: pdf04.js
+
+5. Viết nội dung cho file pdf, sử dụng ma trận để lấy dữ liệu và vị trí: pdf05.js
+
+6. Xây dựng ma trận tọa độ điểm cho hình ảnh trên file pdf: pdf06.js
 
 II - Lấy dữ liệu ghi vào file pdf
 1. 
